@@ -1,4 +1,4 @@
-#a
+
 def PUI():
 
     pui = open("pui_info.txt", "a")
@@ -43,31 +43,53 @@ def PUM():
 
     pum.close()
 
+while True:
 
-print("Personal InFo \n ")
-first_name = input('First Name:')
-middle_name = input('Middle Name:')
-last_name = input('Last Name:')
-age = input("Age:")
-add = input("Address:")
-con = input("Cel/tel no.:")
+    print("Select Action: \n ")
+    print("A. Add New Entry")
+    print("F. Find Patient")
+    print("D. Delete Patient")
+    print("Q. Exit")
+    print("\n")
 
-print(" \n Just type Y/N in the field \n ")
+    sel = input("Enter the Letter:")
 
-trav = input("Have you traveled to china?:")
-expo = input("Do you had exposure to those w/ confirmed nCov?:")
-symp = input("Do you have respiratory symptoms?:")
-fever = input("Do you have fever >=38C?:")
+    if sel == 'Q':
+        print("GoodBye!")
+        break
 
-if (symp == 'Y' and trav == 'Y' and expo == 'Y') or (symp.lower() == 'Y' and trav.lower() == 'Y') or (symp.lower() == 'Y' and expo.lower() == 'Y'):
-    PUI()
-    print("PUI")
+    if sel == 'A':
 
-else:
-    PUM()
-    print("PUM")
+        print("Personal InFo \n ")
+        first_name = input('First Name:')
+        middle_name = input('Middle Name:')
+        last_name = input('Last Name:')
+        age = input("Age:")
+        add = input("Address:")
+        con = input("Cel/tel no.:")
 
+        print(" \n Just type Y/N in the field \n ")
 
+        trav = input("Have you traveled to china?:")
+        expo = input("Do you had exposure to those w/ confirmed nCov?:")
+        symp = input("Do you have respiratory symptoms?:")
+        fever = input("Do you have fever >=38C?:")
+
+    if (symp == 'Y' and trav == 'Y' and expo == 'Y') or (symp.lower() == 'Y' and trav.lower() == 'Y') or (symp.lower() == 'Y' and expo.lower() == 'Y'):
+        PUI()
+        print("PUI")
+
+    else:
+        PUM()
+        print("PUM")
+
+    if sel == "F":
+
+        print("XXXnot ApplicableXXX")
+
+    if sel == "D":
+
+        print("XXXnot ApplicableXXX")
 
 
 
