@@ -43,11 +43,28 @@ def PUM():
 
     pum.close()
 
+def find_pui():
+    pui = open("pui_info.txt", "r")
+
+    for text_line in pui:
+        print(text_line)
+
+    pui.close()
+
+def find_pum():
+    pum = open("pui_info.txt", "r")
+
+    for text_line in pum:
+        print(text_line)
+
+    pum.close()
+
+
 while True:
 
     print("Select Action: \n ")
     print("A. Add New Entry")
-    print("F. Find Patient")
+    print("Find Patient", "I. PUI", "M. PUM")
     print("D. Delete Patient")
     print("Q. Exit")
     print("\n")
@@ -75,17 +92,23 @@ while True:
         symp = input("Do you have respiratory symptoms?:")
         fever = input("Do you have fever >=38C?:")
 
-    if (symp == 'Y' and trav == 'Y' and expo == 'Y') or (symp.lower() == 'Y' and trav.lower() == 'Y') or (symp.lower() == 'Y' and expo.lower() == 'Y'):
-        PUI()
-        print("PUI")
+        if (symp == 'Y' and trav == 'Y' and expo == 'Y') or (symp == 'Y' and trav == 'Y') or (symp  == 'Y' and expo == 'Y'):
+            PUI()
+            print("PUI")
 
-    else:
-        PUM()
-        print("PUM")
+        else:
+            PUM()
+            print("PUM")
 
-    if sel == "F":
+    if sel == 'I':
+        find_pui()
+        
 
-        print("XXXnot ApplicableXXX")
+
+    if sel == 'M':
+        find_pum()
+
+
 
     if sel == "D":
 
