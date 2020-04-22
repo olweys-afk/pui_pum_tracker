@@ -46,18 +46,20 @@ def PUM():
 def find_pui():
     pui = open("pui_info.txt", "r")
 
-    for text_line in pui:
-        print(text_line)
+    print(pui.read())
 
     pui.close()
 
 def find_pum():
-    pum = open("pui_info.txt", "r")
 
-    for text_line in pum:
-        print(text_line)
+    pui = open("pui_info.txt", "r")
 
-    pum.close()
+    print(pui.read())
+
+    pui.close()
+
+
+
 
 
 while True:
@@ -102,7 +104,7 @@ while True:
 
     if sel == 'I':
         find_pui()
-        
+
 
 
     if sel == 'M':
